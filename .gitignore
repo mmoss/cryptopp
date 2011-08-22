@@ -1,0 +1,8 @@
+.scons*
+.DS_Store
+target
+*.o
+*.dylib
+*.so
+*.dll
+*.a

@@ -1,0 +1,23 @@
+import os
+Import('env')
+
+name = 'cryptopp'
+
+src = env.Glob('*.cpp')
+
+if env['SHARED']:
+	bin = env.SharedLibrary(name+('-debug' if env['DEBUG'] else ''), src)
+	
+	if env['PLATFORM'] == 'darwin':
+		env.AppendUnique(SHLINKFLAGS = [
+			'-headerpad_max_install_names',
+			'-install_name',
+			'"@rpath/%s"' % os.path.basename(bin[0].path)])
+
+else:
+	bin = env.StaticLibrary(name+('-debug' if env['DEBUG'] else ''), src)
+
+inc = env.Install('$PREFIX/include/'+name, env.Glob('**.h'))
+lib = env.Install('$PREFIX/lib', bin)
+
+Default(lib, inc)
