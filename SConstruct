@@ -27,6 +27,6 @@ env = Environment(PREFIX = GetOption('prefix'),
 									MODE = 'debug' if GetOption('enable-debug') else 'release')
 
 if env['DEBUG']:
-	env.AppendUnique(CCFLAGS = '-g')
+	env.AppendUnique(CCFLAGS = '-g -Wtautological-compare')
 
 env.SConscript('src/SConscript', variant_dir='#target/build/$MODE', duplicate=0, exports='env')
