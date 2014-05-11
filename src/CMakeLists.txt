@@ -29,7 +29,6 @@ SET(CRYPTOPP_SRCS_FIPS
 	files.cpp 
 	filters.cpp 
 	fips140.cpp 
-	fipstest.cpp 
 	gcm.cpp 
 	gf2n.cpp 
 	gfpcrypt.cpp 
@@ -346,6 +345,7 @@ IF(CRYPTOPP_BUILD_TESTS AND CRYPTOPP_STATIC)
 		validat1.cpp  
 		validat2.cpp  
 		validat3.cpp
+		fipstest.cpp 
 	)
 	IF(WIN32)
 		SET(TEST_SRCS ${TEST_SRCS}
