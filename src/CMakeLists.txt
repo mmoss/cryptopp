@@ -2,7 +2,7 @@
 # Crypto++ Library
 #########################
 
-CONFIGURE_FILE(adhoc.cpp.proto ${CMAKE_SOURCE_DIR}/src/adhoc.cpp)
+CONFIGURE_FILE(adhoc.cpp.proto ${CMAKE_CURRENT_SOURCE_DIR}/adhoc.cpp)
 
 SET(CRYPTOPP_SRCS_FIPS
 	algebra.cpp 
