@@ -6,3 +6,4 @@ target
 *.so
 *.dll
 *.a
+src/adhoc.cpp
