@@ -1,4 +1,4 @@
-# Cryto++
+# Crypto++
 ## C++ Cryptographic Schemes
 
 This is a github hosted version of the Crypto++ library source from the [Crypto++ download link](http://www.cryptopp.com/#download).
