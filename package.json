@@ -1,0 +1,11 @@
+{
+	"noarch": [
+		["src/*.h", "include"]
+	],
+	"win32-x64-vc140-debug": [
+		["build/src/debug/*", "lib"]
+	],
+	"win32-x64-vc140-release": [
+		["build/src/release/*", "lib"]
+	]
+}
