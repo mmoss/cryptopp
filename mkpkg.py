@@ -34,7 +34,7 @@ vars = [
 	'curl',
 	'-X',
 	'PUT',
-	'--data',
+	'--data-binary',
 	'@' + zipname,
 	'http://a1.ayxia.com:8881/post/%s/%s/%s' % (package,version,zipname)
 	]
