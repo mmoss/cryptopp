@@ -28,6 +28,7 @@ for pat in spec[sys.argv[1]]:
 		# shutil.copy(file,dst)
 		zf.write(file,dst)
 
+zf.close()
 
 vars = [
 	'curl',
