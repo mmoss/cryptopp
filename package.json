@@ -1,6 +1,6 @@
 {
 	"noarch": [
-		["src/*.h", "include"]
+		["src/*.h", "include/cryptopp"]
 	],
 	"win32-x64-vc140-debug": [
 		["build/src/debug/*", "lib"]
