@@ -1,7 +1,7 @@
 {
 	"win32-x64-vc140": [
 		["src/**/*.h", "include/cryptopp"],
-		["build/src/debug/*", "debug/lib"],
-		["build/src/release/*", "release/lib"]
+		["src/debug/*", "debug/lib"],
+		["src/release/*", "release/lib"]
 	],
 }
