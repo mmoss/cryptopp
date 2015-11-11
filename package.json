@@ -3,5 +3,5 @@
 		["src/**/*.h", "include/cryptopp"],
 		["src/debug/*", "debug/lib"],
 		["src/release/*", "release/lib"]
-	],
+	]
 }
