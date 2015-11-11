@@ -1,11 +1,7 @@
 {
-	"noarch": [
-		["src/*.h", "include/cryptopp"]
+	"win32-x64-vc140": [
+		["src/**/*.h", "include/cryptopp"],
+		["build/src/debug/*", "debug/lib"],
+		["build/src/release/*", "release/lib"]
 	],
-	"win32-x64-vc140-debug": [
-		["build/src/debug/*", "lib"]
-	],
-	"win32-x64-vc140-release": [
-		["build/src/release/*", "lib"]
-	]
 }
