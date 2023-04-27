@@ -6,7 +6,7 @@ PROJECT(cryptopp)
 # Global platform-specific settings
 ###################################
 IF(WIN32)
-  ADD_DEFINITIONS(-wd4297 -D_ITERATOR_DEBUG_LEVEL=0 -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -MP -D_SCL_SECURE_NO_WARNINGS -EHsc)
+  ADD_DEFINITIONS(-DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -MP -D_SCL_SECURE_NO_WARNINGS -EHsc)
   SET(CMAKE_CXX_FLAGS "-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS")
 ELSE()
   SET(ADDED_DEFINITIONS -Wall -Wno-unused-function -Wno-unused-variable -fvisibility=hidden -fPIC -Wnon-virtual-dtor -Wreorder -Wstrict-null-sentinel -Wsign-promo)
@@ -73,9 +73,9 @@ IF(CRYPTOPP_STATIC_RUNTIME)
 			CMAKE_C_FLAGS_DEBUG
 			CMAKE_C_FLAGS_RELEASE
 			)
-#		FOREACH(CompilerFlag ${CompilerFlags})
-#			STRING(REPLACE "/MD" "/MT" ${CompilerFlag} "${${CompilerFlag}}")
-#		ENDFOREACH()
+		FOREACH(CompilerFlag ${CompilerFlags})
+			STRING(REPLACE "/MD" "/MT" ${CompilerFlag} "${${CompilerFlag}}")
+		ENDFOREACH()
 	ENDIF()
 ENDIF()
 
